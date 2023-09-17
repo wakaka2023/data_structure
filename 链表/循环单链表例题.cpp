@@ -1,4 +1,4 @@
-#include "C:\Users\35317\Desktop\新建文件夹\链表\单链表.h"
+#include "单链表.h"
 
 //循环单链表，统计其值为e个数
 void t1(LinkNode *&L,ElemType e){

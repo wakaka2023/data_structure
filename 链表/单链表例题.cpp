@@ -1,11 +1,11 @@
-#include "C:\Users\35317\Desktop\ÐÂ½¨ÎÄ¼þ¼Ð\Á´±í\µ¥Á´±í.h"
+#include "å•é“¾è¡¨.h"
 /*
 P53
 */
 
 void t1(LinkNode *&L, LinkNode *&A, LinkNode *&B) {
-    //AÎ²²å£¬BÍ·²å
-    LinkNode *p = L->next, *r, *q; //p±éÀúL,rÖ¸ÏòA±íÎ²
+    //Aå°¾æ’ï¼ŒBå¤´æ’
+    LinkNode *p = L->next, *r, *q; //péåŽ†L,ræŒ‡å‘Aè¡¨å°¾
     A = L;
     r = A;
     B = (LinkNode *)malloc(sizeof(LinkNode));
@@ -24,7 +24,7 @@ void t1(LinkNode *&L, LinkNode *&A, LinkNode *&B) {
     r->next = NULL;
 }
 
-//É¾³ýÁ´±í×î´óÔªËØ
+//åˆ é™¤é“¾è¡¨æœ€å¤§å…ƒç´ 
 void t2(LinkNode *&L) {
     LinkNode *p = L->next, *pre = L, *maxpre = pre, *maxp = p;
     while (p != NULL) {
@@ -39,7 +39,7 @@ void t2(LinkNode *&L) {
     free(maxp);
 }
 
-//µÝÔöÅÅÐò
+//é€’å¢žæŽ’åº
 void t3(LinkNode *&L) {
     LinkNode *p, *pre, *q;
     p = L->next->next;

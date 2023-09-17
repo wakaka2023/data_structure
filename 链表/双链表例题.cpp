@@ -1,9 +1,9 @@
-#include "C:\Users\35317\Desktop\ÐÂ½¨ÎÄ¼þ¼Ð\Á´±í\Ë«Á´±í.h"
+#include "åŒé“¾è¡¨.h"
 /*
 P58
 */
 
-//ÄæÖÃ
+//é€†ç½®
 void t1(DLinkNode *&L) {
     DLinkNode *p = L->next, *q;
     L->next = NULL;
@@ -19,7 +19,7 @@ void t1(DLinkNode *&L) {
     }
 }
 
-//µÝÔöÅÅÐò
+//é€’å¢žæŽ’åº
 void t2(DLinkNode *&L) {
     DLinkNode *p, *q,*r;
     p = L->next->next;

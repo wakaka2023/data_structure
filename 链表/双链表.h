@@ -14,6 +14,13 @@ void InitList(DLinkNode *&L) {
     L->prior = NULL;
 }
 
+//循环双链表初始化
+void InitListC(DLinkNode *&L) {
+    L = (DLinkNode *)malloc(sizeof(DLinkNode));
+    L->next = L;
+    L->prior = L;
+}
+
 void DestroyList(DLinkNode *&L) {
     DLinkNode *pre = L, *p = L->next;
     while(p != NULL) {
@@ -24,9 +31,30 @@ void DestroyList(DLinkNode *&L) {
     free(pre);
 }
 
+//销毁循环双链表
+void DestroyListC(DLinkNode *&L) {
+    DLinkNode *pre = L, *p = L->next;
+    while(p != L) {
+        free(pre);
+        pre = p;
+        p = p->next;
+    }
+    free(pre);
+}
+
 void DispList(DLinkNode *L) {
     DLinkNode *p = L->next;
     while (p != NULL) {
+        printf("%d ", p->data);
+        p = p->next;
+    }
+    printf("\n");
+}
+
+//输出循环双链表
+void DispListC(DLinkNode *L) {
+    DLinkNode *p = L->next;
+    while (p != L) {
         printf("%d ", p->data);
         p = p->next;
     }
@@ -64,6 +92,24 @@ void CreateListT(DLinkNode *&L, ElemType a[], int n) {
         r = s;
     }
     r->next = NULL;
+}
+
+//循环双链表尾插
+void CreateListTC(DLinkNode *&L, ElemType a[], int n) {
+    L = (DLinkNode *)malloc(sizeof(DLinkNode));
+    L->next = L;
+    L->prior = L;
+    DLinkNode *s, *r = L;
+
+    for (int i; i < n; i++) {
+        s = (DLinkNode *)malloc(sizeof(DLinkNode));
+        s->data = a[i];
+        s->prior = r;
+        r->next = s;
+        r = s;
+        L->prior = r;
+    }
+    r->next = L;
 }
 
 bool ListInsert(DLinkNode *&L, ElemType e, int i) {

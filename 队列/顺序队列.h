@@ -35,7 +35,7 @@ bool deQueue(SqQueue *&Q, ElemType &e) {
     return true;
 }
 
-//环形队列
+//寰幆闃熷垪
 void InitQueueC(SqQueue *&Q) {
     Q = (SqQueue *)malloc(sizeof(SqQueue));
     Q->front = Q->rear = 0;

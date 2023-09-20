@@ -1,7 +1,7 @@
-#include "Ë³ĞòÕ».h"
+#include "é¡ºåºæ ˆ.h"
 #include <string.h>
 
-//Æ¥ÅäÀ¨ºÅ
+//åŒ¹é…æ‹¬å·
 bool Match(char str[],int n){
     SqStack *st;
     InitStack(st);

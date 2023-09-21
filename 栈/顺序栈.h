@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #define MaxSize 20
 
-typedef int ElemType;
+typedef char ElemType;
 typedef struct {
     ElemType data[MaxSize];
     int top;

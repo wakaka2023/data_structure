@@ -14,7 +14,7 @@ int BF(SqString s,SqString t){
         }
     }
     if (j>=t.length)
-        //·µ»ØÂß¼­Î»ÖÃ
+        //è¿”å›é€»è¾‘ä½ç½®
         return (i-t.length+1);
     else
         return -1;

@@ -57,7 +57,7 @@ bool SubStr(SqString s, int start, int length, SqString &S) {
 
 //将t插入s的i（逻辑位置）位置，返回S
 bool InsertStr(SqString &S,int i,SqString s,SqString t){
-    if (i<=0 || i>s.length+1)
+    if (i<=0 || i-1>s.length)
         return false;
     for (int j=0;j<i-1;j++)
         S.data[j] = s.data[j];
@@ -71,7 +71,7 @@ bool InsertStr(SqString &S,int i,SqString s,SqString t){
 
 //s中删除起始为i（逻辑位置），长度为j的字符，返回S
 bool DeleteStr(SqString &S,SqString s,int i,int j){
-    if (i<=0||i>s.length||i+j>s.length+1)
+    if (i<=0||i>s.length||i+j-1>s.length)
         return false;
     for (int k=0;k<i-1;k++)
         S.data[k] = s.data[k];

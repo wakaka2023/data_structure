@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define MaxSize 30
+#define MaxSize 255
 
 typedef char ElemType;
 typedef struct {

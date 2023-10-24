@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #define MaxSize 50
 
-// π”√À≥–Ú±Ì
 typedef int ElemType;
 typedef struct {
     ElemType data[MaxSize];

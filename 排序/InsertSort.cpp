@@ -1,7 +1,7 @@
 #include "SeqList.h"
 
 
-//Ö±½Ó²åÈëÅÅĞò
+//ç›´æ¥æ’å…¥æ’åº
 void InsertSort(SqList *&L) {
     int i, j, temp;
     for (i = 1; i < L->length; i++) {
@@ -14,7 +14,7 @@ void InsertSort(SqList *&L) {
     }
 }
 
-//ÕÛ°ë²åÈë
+//æŠ˜åŠæ’å…¥
 void InsertSortP(SqList *&L) {
     int i, j, low, high, mid, temp;
     for (i = 1; i < L->length; i++) {
@@ -36,7 +36,7 @@ void InsertSortP(SqList *&L) {
     }
 }
 
-//Ï£¶ûÅÅĞò
+//å¸Œå°”æ’åº
 void ShellSort(SqList *&L) {
     int i, j, d, temp;
 

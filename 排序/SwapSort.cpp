@@ -1,6 +1,6 @@
 #include "SeqList.h"
 
-//Ã°ÅÝÅÅÐò
+//å†’æ³¡æŽ’åº
 void BubbleSort(SqList *&L) {
     int temp;
     for(int i = L->length - 1; i > 0; i--) {
@@ -18,7 +18,7 @@ void BubbleSort(SqList *&L) {
     }
 }
 
-//·ÖÇø
+//åˆ†åŒº
 int Partition(SqList *&L, int low, int high) {
     int mid = L->data[low];
     while (low < high) {
